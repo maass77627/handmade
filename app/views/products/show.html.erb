@@ -1,0 +1,14 @@
+<h1> Product Show </h1>
+    
+        <%= @product.name %><br>
+        <%= @product.craft %><br>
+        
+        <%= @product.description %><br>
+        <%= @product.price %><br>
+
+        <% if @product.avatar.attached? %>
+       
+         <image src="<%=(url_for(@product.avatar)) %>"><br>
+       
+    <% end %>
+    
