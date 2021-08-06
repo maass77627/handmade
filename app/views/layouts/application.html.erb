@@ -13,8 +13,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-    <img src="https://imgprd19.hobbylobby.com/3/69/f7/369f79a0772945e1017b22a89ca12e47a542c949/700Wx700H-1432178-052819.jpg" width="100px" height="100px">
-    Handmade</a>
+    <img src="https://imgprd19.hobbylobby.com/3/69/f7/369f79a0772945e1017b22a89ca12e47a542c949/700Wx700H-1432178-052819.jpg" width="75px" height="75px">
+    Joni's Handmade</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,17 +24,23 @@
           <a class="nav-link active" aria-current="page" href="http://localhost:3002/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:3002/products/">PRODUCTS</a>
+          <a class="nav-link" href="http://localhost:3002/products/">Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="http://localhost:3002/products/new">New</a>
         </li>
+       
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        <a class="nav-link" href="http://localhost:3002/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://localhost:3002/users/new">SignUp</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to "Log out", logout_path, method: :delete %></a>
+      </li>
       </ul>
-
-
+      
       <form class="d-flex">
       <%= form_tag(products_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Products", class: 'form-control me-2' %>
