@@ -1,14 +1,16 @@
-# <div class="all">
+
 <h1> All Products </h1>
+<% if logged_in? %>
     <% @products.each do |product| %>
         <div class="all">
-        <%= product.name %><br>
-        # <%= product.craft %><br>
+        <center><%= product.name.upcase %><br><center>
+        
         <% if product.avatar.attached? %>
+        <%= link_to 'product.name', product_path(product.id) %><br>
          <image  src="<%=(url_for(product.avatar))%>", style="height: 300px; width: 300px; border:5px solid black;" ><br>
-        # <%= product.description %><br>
-        # <%= product.price %>
+        
+         <% end %>
        </div>
     <% end %>
-    <% end %>
-   
+     <%end%>
+    

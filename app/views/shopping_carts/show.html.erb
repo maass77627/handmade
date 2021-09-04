@@ -1,0 +1,16 @@
+
+<h1>Your Shopping Cart </h1>
+<%= @shopping_cart.products.count %>
+
+<% @shopping_cart.products.each do |product| %>
+    <center>
+    <%= product.name %>
+    <%= product.craft %><br>
+    <%= product.description %><br>
+    <%= product.price %><br>
+    <% if product.avatar.attached? %>
+
+         <image src="<%=(url_for(product.avatar))%>", style="height: 300px; width: 300px; border:5px solid black;"><br>
+         <% end %>
+         </center>
+     <% end %>

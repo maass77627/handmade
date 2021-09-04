@@ -2,9 +2,17 @@
     text-align: center;
 } */
 
-/* .d-flex {
+.text {
+  float: right;
+  text-align: center;
+  margin-right: 300px;
+  margin-top: 75px;
+}
+.picture {
     float: left;
-} */
+    margin-top: 75px;
+    margin-left: 300px;
+}
 
 .all {
  float: left;
@@ -32,7 +40,7 @@ h1 {
     @media (max-width: 992px) {
       columns: 2;
     }
-    //@media (max-width: 768px) {columns: 1;}
+    @media (max-width: 768px) {columns: 1;}
     .grid {
       display: inline-block;
       margin-bottom: 16px;
