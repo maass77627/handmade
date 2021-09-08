@@ -1,6 +1,5 @@
 class ShoppingCart < ApplicationRecord
     belongs_to :user, optional: true
-    # has_and_belongs_to_many :products
     has_many :line_items, dependent: :destroy
     has_many :products, through: :line_items
 

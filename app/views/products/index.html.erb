@@ -3,10 +3,10 @@
 <% if logged_in? %>
     <% @products.each do |product| %>
         <div class="all">
-        <center><%= product.name.upcase %><br><center>
-        
+        <center><strong><%= product.name.upcase %></strong><br><center>
+        <center><strong> $ <%= product.price %></strong><br><center>
         <% if product.avatar.attached? %>
-        <%= link_to 'product.name', product_path(product.id) %><br>
+        <%= link_to 'view product', product_path(product.id) %><br>
          <image  src="<%=(url_for(product.avatar))%>", style="height: 300px; width: 300px; border:5px solid black;" ><br>
         
          <% end %>

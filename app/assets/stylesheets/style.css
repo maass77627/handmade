@@ -1,6 +1,11 @@
-/* body {
+ /* body {
     text-align: center;
 } */
+
+.test {
+
+   font-weight : bold;
+}
 
 .text {
   float: right;

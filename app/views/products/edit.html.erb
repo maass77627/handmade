@@ -1,0 +1,11 @@
+<center>
+<%= form_for @product do |f| %>
+  name: <%= f.text_field :name %><br />
+  craft: <%= f.text_field :craft %><br />
+  description: <%= f.text_area :description %><br />
+  category: <%= f.text_field :category %><br />
+  image: <%= f.file_field :avatar %><br />
+  price: <%= f.text_field :price %><br />
+  <%= f.submit %>
+<% end %>
+</center>

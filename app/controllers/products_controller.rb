@@ -1,12 +1,8 @@
 class ProductsController < ApplicationController
     skip_before_action :verify_authenticity_token, :only => :create
-    # before_filter :authenticated?
 
     def index
-        # byebug
         @products = Product.search(params[:search])
-
-        # render json: products
     end
 
     def new 
@@ -14,9 +10,7 @@ class ProductsController < ApplicationController
     end 
 
     def create
-       
         @product = Product.create(product_params)
-        # render json: product, status: :created
         redirect_to products_path
     end 
 
@@ -32,11 +26,6 @@ class ProductsController < ApplicationController
 
     def show
         @product = Product.find_by(id: params[:id])
-        # if product
-        #     render json: product
-        # else 
-        #     render json: {error: "Product not found"}
-        # end
     end
 
     def destroy

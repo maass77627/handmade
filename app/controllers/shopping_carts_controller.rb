@@ -13,7 +13,8 @@ end
 
 def show
     @shopping_cart = current_cart
-     #byebug
+    @shopping_cart.save
+    #  byebug
 end 
 
 end

@@ -2,13 +2,14 @@
 <h1> Product Show </h1>
     <div class="text">
     <h2>  <%=  @product.name  %><br> </h2>
-        <%= @product.craft %><br>
+       Type: <%= @product.craft %><br>
         
-        <%= @product.description %><br>
-        <%= @product.price %><br>
-         <%= button_to "Add #{@product.name} to cart", line_items_path(:product_id => @product.id) %>
-        
-        
+       Description: <%= @product.description %><br>
+       $ <%= @product.price %><br>
+         <%= button_to "Add to cart", line_items_path(:product_id => @product.id) %>
+        <% if current_user.username == "kelly" %>
+        <%= link_to "Edit Product", edit_product_path(@product) %>
+       <% end %>
         </div>
         <% if @product.avatar.attached? %>
        <div class="picture">
